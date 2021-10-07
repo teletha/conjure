@@ -91,7 +91,7 @@ public class SLF4J implements SLF4JServiceProvider, ILoggerFactory {
 
             @Override
             public boolean isDebugEnabled() {
-                return true;
+                return true; //
             }
 
             @Override
