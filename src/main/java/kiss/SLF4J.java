@@ -7,7 +7,7 @@
  *
  *          http://opensource.org/licenses/mit-license.php
  */
-package conjure;
+package kiss;
 
 import org.slf4j.ILoggerFactory;
 import org.slf4j.IMarkerFactory;
@@ -17,8 +17,6 @@ import org.slf4j.event.Level;
 import org.slf4j.helpers.LegacyAbstractLogger;
 import org.slf4j.spi.MDCAdapter;
 import org.slf4j.spi.SLF4JServiceProvider;
-
-import kiss.I;
 
 public class SLF4J implements SLF4JServiceProvider, ILoggerFactory {
 

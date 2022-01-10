@@ -7,7 +7,7 @@
  *
  *          http://opensource.org/licenses/mit-license.php
  */
-package conjure;
+package kiss;
 
 import java.net.URI;
 
