@@ -22,13 +22,13 @@ import org.apache.logging.log4j.spi.LoggerContextFactory;
 
 public class Log4j2 implements LoggerContextFactory, LoggerContext {
 
-    public static void initialize() {
+    public static void install() {
         try {
             Class.forName("org.apache.logging.log4j.spi.LoggerContextFactory");
 
             System.setProperty("log4j2.loggerContextFactory", Log4j2.class.getName());
         } catch (ClassNotFoundException e) {
-            // ignore
+            I.warn("The log4j-api-xxx.jar is not found in classpath. Stop installing the conjure system for log4j2.");
         }
     }
 
@@ -106,6 +106,9 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
         return true;
     }
 
+    /**
+     * 
+     */
     private static class Logger extends AbstractLogger {
 
         private final String name;
@@ -119,7 +122,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, Message message, Throwable t) {
-            return false;
+            return true;
         }
 
         /**
@@ -127,7 +130,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, CharSequence message, Throwable t) {
-            return false;
+            return true;
         }
 
         /**
@@ -135,7 +138,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, Object message, Throwable t) {
-            return false;
+            return true;
         }
 
         /**
@@ -143,7 +146,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, String message, Throwable t) {
-            return false;
+            return true;
         }
 
         /**
@@ -151,7 +154,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, String message) {
-            return false;
+            return true;
         }
 
         /**
@@ -159,7 +162,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, String message, Object... params) {
-            return false;
+            return true;
         }
 
         /**
@@ -167,7 +170,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, String message, Object p0) {
-            return false;
+            return true;
         }
 
         /**
@@ -175,7 +178,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1) {
-            return false;
+            return true;
         }
 
         /**
@@ -183,7 +186,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2) {
-            return false;
+            return true;
         }
 
         /**
@@ -191,7 +194,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3) {
-            return false;
+            return true;
         }
 
         /**
@@ -199,7 +202,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4) {
-            return false;
+            return true;
         }
 
         /**
@@ -207,7 +210,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) {
-            return false;
+            return true;
         }
 
         /**
@@ -215,7 +218,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) {
-            return false;
+            return true;
         }
 
         /**
@@ -223,7 +226,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) {
-            return false;
+            return true;
         }
 
         /**
@@ -231,7 +234,7 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) {
-            return false;
+            return true;
         }
 
         /**
@@ -239,14 +242,47 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public boolean isEnabled(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) {
-            return false;
+            return true;
         }
 
         /**
          * {@inheritDoc}
          */
         @Override
-        public void logMessage(String fqcn, Level level, Marker marker, Message message, Throwable t) {
+        public void logMessage(String fqcn, Level level, Marker marker, Message message, Throwable error) {
+            String msg = message.getFormattedMessage();
+
+            switch (level.getStandardLevel()) {
+            case OFF:
+                break;
+
+            case TRACE:
+                I.trace(name, msg);
+                if (error != null) I.trace(error);
+                break;
+
+            case DEBUG:
+            case ALL:
+                I.debug(msg);
+                if (error != null) I.debug(error);
+                break;
+
+            case INFO:
+                I.info(msg);
+                if (error != null) I.info(error);
+                break;
+
+            case WARN:
+                I.warn(msg);
+                if (error != null) I.warn(error);
+                break;
+
+            case ERROR:
+            case FATAL:
+                I.error(msg);
+                if (error != null) I.error(error);
+                break;
+            }
         }
 
         /**

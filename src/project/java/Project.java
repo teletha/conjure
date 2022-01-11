@@ -15,5 +15,6 @@ public class Project extends bee.api.Project {
         require("com.github.teletha", "sinobu");
         require("org.slf4j", "slf4j-api").atProvided();
         require("org.apache.logging.log4j", "log4j-api").atProvided();
+        require("com.github.teletha", "antibug").atTest();
     }
 }
