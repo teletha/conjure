@@ -21,6 +21,19 @@ import org.slf4j.spi.SLF4JServiceProvider;
 public class SLF4J implements SLF4JServiceProvider, ILoggerFactory {
 
     /**
+     * Install logger delegation.
+     */
+    public static void install() {
+        try {
+            Class.forName("org.apache.logging.log4j.spi.LoggerContextFactory");
+
+            System.setProperty("log4j2.loggerContextFactory", Log4j2.class.getName());
+        } catch (ClassNotFoundException e) {
+            I.warn("The log4j-api-xxx.jar is not found in classpath. Stop installing the conjure system for log4j2.");
+        }
+    }
+
+    /**
      * {@inheritDoc}
      */
     @Override

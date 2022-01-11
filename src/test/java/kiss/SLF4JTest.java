@@ -11,21 +11,21 @@ package kiss;
 
 import java.lang.System.Logger.Level;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-class Log4j2Test extends LoggerTestBase {
+class SLF4JTest extends LoggerTestBase {
 
     static {
-        Log4j2.install();
+        SLF4J.install();
     }
 
     @Test
     void message() {
-        Logger logger = LogManager.getLogger();
-        logger.info("message from log4j2 api");
+        Logger logger = LoggerFactory.getLogger(SLF4JTest.class);
+        logger.info("message from slf4j api");
 
-        assert Log.check(Level.INFO, "message from log4j2 api");
+        assert Log.check(Level.INFO, "message from slf4j api");
     }
 }

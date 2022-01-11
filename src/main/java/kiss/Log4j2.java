@@ -22,6 +22,9 @@ import org.apache.logging.log4j.spi.LoggerContextFactory;
 
 public class Log4j2 implements LoggerContextFactory, LoggerContext {
 
+    /**
+     * Install logger delegation.
+     */
     public static void install() {
         try {
             Class.forName("org.apache.logging.log4j.spi.LoggerContextFactory");
@@ -109,12 +112,10 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
     /**
      * 
      */
+    @SuppressWarnings("serial")
     private static class Logger extends AbstractLogger {
 
-        private final String name;
-
         private Logger(String name) {
-            this.name = name;
         }
 
         /**
@@ -250,39 +251,38 @@ public class Log4j2 implements LoggerContextFactory, LoggerContext {
          */
         @Override
         public void logMessage(String fqcn, Level level, Marker marker, Message message, Throwable error) {
-            String msg = message.getFormattedMessage();
-
+            int kind;
             switch (level.getStandardLevel()) {
             case OFF:
-                break;
+                return;
 
             case TRACE:
-                I.trace(name, msg);
-                if (error != null) I.trace(error);
+                kind = 1;
                 break;
 
             case DEBUG:
-            case ALL:
-                I.debug(msg);
-                if (error != null) I.debug(error);
+                kind = 2;
                 break;
 
             case INFO:
-                I.info(msg);
-                if (error != null) I.info(error);
+                kind = 3;
                 break;
 
             case WARN:
-                I.warn(msg);
-                if (error != null) I.warn(error);
+                kind = 4;
                 break;
 
             case ERROR:
             case FATAL:
-                I.error(msg);
-                if (error != null) I.error(error);
+                kind = 5;
+                break;
+
+            default:
+                kind = 6;
                 break;
             }
+
+            I.log("system", message.getFormattedMessage(), kind, 9);
         }
 
         /**
