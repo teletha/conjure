@@ -17,10 +17,6 @@ import org.junit.jupiter.api.Test;
 
 class Log4j2Test extends LoggerTestBase {
 
-    static {
-        Log4j2.install();
-    }
-
     @Test
     void message() {
         Logger logger = LogManager.getLogger();

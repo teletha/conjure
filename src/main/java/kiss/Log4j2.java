@@ -19,94 +19,92 @@ import org.apache.logging.log4j.spi.AbstractLogger;
 import org.apache.logging.log4j.spi.ExtendedLogger;
 import org.apache.logging.log4j.spi.LoggerContext;
 import org.apache.logging.log4j.spi.LoggerContextFactory;
+import org.apache.logging.log4j.spi.Provider;
 
-public class Log4j2 implements LoggerContextFactory, LoggerContext {
+public class Log4j2 extends Provider {
+
+    public Log4j2() {
+        super(15, "2.6.0", Factory.class);
+    }
 
     /**
-     * Install logger delegation.
+     * 
      */
-    public static void install() {
-        try {
-            Class.forName("org.apache.logging.log4j.spi.LoggerContextFactory");
+    public static class Factory implements LoggerContextFactory, LoggerContext {
 
-            System.setProperty("log4j2.loggerContextFactory", Log4j2.class.getName());
-        } catch (ClassNotFoundException e) {
-            I.warn("The log4j-api-xxx.jar is not found in classpath. Stop installing the conjure system for log4j2.");
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public LoggerContext getContext(String fqcn, ClassLoader loader, Object externalContext, boolean currentContext) {
+            return this;
         }
-    }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public LoggerContext getContext(String fqcn, ClassLoader loader, Object externalContext, boolean currentContext) {
-        return this;
-    }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public LoggerContext getContext(String fqcn, ClassLoader loader, Object externalContext, boolean currentContext, URI configLocation, String name) {
+            return this;
+        }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public LoggerContext getContext(String fqcn, ClassLoader loader, Object externalContext, boolean currentContext, URI configLocation, String name) {
-        return this;
-    }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public void removeContext(LoggerContext context) {
+            // do nothing
+        }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void removeContext(LoggerContext context) {
-        // do nothing
-    }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public Object getExternalContext() {
+            // If this exception will be thrown, it is bug of this program. So we must rethrow the
+            // wrapped error in here.
+            throw new Error();
+        }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Object getExternalContext() {
-        // If this exception will be thrown, it is bug of this program. So we must rethrow the
-        // wrapped error in here.
-        throw new Error();
-    }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public ExtendedLogger getLogger(String name) {
+            return new Logger(name);
+        }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public ExtendedLogger getLogger(String name) {
-        return new Logger(name);
-    }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public ExtendedLogger getLogger(String name, MessageFactory messageFactory) {
+            return new Logger(name);
+        }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public ExtendedLogger getLogger(String name, MessageFactory messageFactory) {
-        return new Logger(name);
-    }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public boolean hasLogger(String name) {
+            return true;
+        }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public boolean hasLogger(String name) {
-        return true;
-    }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public boolean hasLogger(String name, MessageFactory messageFactory) {
+            return true;
+        }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public boolean hasLogger(String name, MessageFactory messageFactory) {
-        return true;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public boolean hasLogger(String name, Class<? extends MessageFactory> messageFactoryClass) {
-        return true;
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public boolean hasLogger(String name, Class<? extends MessageFactory> messageFactoryClass) {
+            return true;
+        }
     }
 
     /**

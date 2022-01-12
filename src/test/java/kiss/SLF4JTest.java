@@ -17,10 +17,6 @@ import org.slf4j.LoggerFactory;
 
 class SLF4JTest extends LoggerTestBase {
 
-    static {
-        SLF4J.install();
-    }
-
     @Test
     void message() {
         Logger logger = LoggerFactory.getLogger(SLF4JTest.class);

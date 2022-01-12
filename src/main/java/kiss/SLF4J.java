@@ -14,24 +14,13 @@ import org.slf4j.IMarkerFactory;
 import org.slf4j.Logger;
 import org.slf4j.Marker;
 import org.slf4j.event.Level;
+import org.slf4j.helpers.BasicMarkerFactory;
 import org.slf4j.helpers.LegacyAbstractLogger;
+import org.slf4j.helpers.NOPMDCAdapter;
 import org.slf4j.spi.MDCAdapter;
 import org.slf4j.spi.SLF4JServiceProvider;
 
 public class SLF4J implements SLF4JServiceProvider, ILoggerFactory {
-
-    /**
-     * Install logger delegation.
-     */
-    public static void install() {
-        try {
-            Class.forName("org.apache.logging.log4j.spi.LoggerContextFactory");
-
-            System.setProperty("log4j2.loggerContextFactory", Log4j2.class.getName());
-        } catch (ClassNotFoundException e) {
-            I.warn("The log4j-api-xxx.jar is not found in classpath. Stop installing the conjure system for log4j2.");
-        }
-    }
 
     /**
      * {@inheritDoc}
@@ -46,7 +35,7 @@ public class SLF4J implements SLF4JServiceProvider, ILoggerFactory {
      */
     @Override
     public IMarkerFactory getMarkerFactory() {
-        return null;
+        return new BasicMarkerFactory();
     }
 
     /**
@@ -54,7 +43,7 @@ public class SLF4J implements SLF4JServiceProvider, ILoggerFactory {
      */
     @Override
     public MDCAdapter getMDCAdapter() {
-        return null;
+        return new NOPMDCAdapter();
     }
 
     /**
@@ -62,7 +51,7 @@ public class SLF4J implements SLF4JServiceProvider, ILoggerFactory {
      */
     @Override
     public String getRequestedApiVersion() {
-        return null;
+        return "2.0.0";
     }
 
     /**
@@ -107,32 +96,31 @@ public class SLF4J implements SLF4JServiceProvider, ILoggerFactory {
 
             @Override
             protected void handleNormalizedLoggingCall(Level level, Marker marker, String msg, Object[] arguments, Throwable throwable) {
+                int kind;
                 switch (level) {
                 case TRACE:
-                    I.trace(name, String.format(msg, arguments));
-                    if (throwable != null) I.trace(name, throwable);
+                    kind = 1;
                     break;
 
                 case DEBUG:
-                    I.debug(name, String.format(msg, arguments));
-                    if (throwable != null) I.debug(name, throwable);
+                    kind = 2;
                     break;
 
                 case INFO:
-                    I.info(name, String.format(msg, arguments));
-                    if (throwable != null) I.info(name, throwable);
+                    kind = 3;
                     break;
 
                 case WARN:
-                    I.warn(name, String.format(msg, arguments));
-                    if (throwable != null) I.warn(name, throwable);
+                    kind = 4;
                     break;
 
-                case ERROR:
-                    I.error(name, String.format(msg, arguments));
-                    if (throwable != null) I.error(name, throwable);
+                default:
+                    kind = 5;
                     break;
                 }
+
+                I.log("system", String.format(msg, arguments), kind, 5);
+                if (throwable != null) I.log("system", throwable, kind, 5);
             }
 
             @Override
