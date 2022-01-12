@@ -51,7 +51,7 @@ public class SLF4J implements SLF4JServiceProvider, ILoggerFactory {
      */
     @Override
     public String getRequestedApiVersion() {
-        return "2.0.0";
+        return "2.0.99";
     }
 
     /**
