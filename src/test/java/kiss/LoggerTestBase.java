@@ -15,7 +15,10 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 
+@Execution(ExecutionMode.SAME_THREAD)
 public class LoggerTestBase {
 
     protected static final LogBuffer Log = new LogBuffer();
