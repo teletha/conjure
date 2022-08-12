@@ -8,7 +8,12 @@
 
 
 ## Summary
+Including this library in the classpath automatically delegates logs output from the various logging APIs to [Sinobu](https://github.com/teletha/sinobu)'s logging API.
 
+The currently supported APIs are as follows:
+* [Apache Commons Logging](https://commons.apache.org/proper/commons-logging/)
+* [Apache Log4j2](https://logging.apache.org/log4j/2.x/)
+* [SLF4J](https://www.slf4j.org/)
 <p align="right"><a href="#top">back to top</a></p>
 
 
