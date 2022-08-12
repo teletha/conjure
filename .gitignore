@@ -302,3 +302,49 @@ replay_pid*
 
 
 # End of https://www.toptal.com/developers/gitignore/api/Java,Maven,Windows,Linux,Eclipse,IntelliJ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Azure Toolkit for IntelliJ plugin
+# https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
+.idea/**/azureSettings.xml

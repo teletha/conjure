@@ -1,13 +1,18 @@
 <p align="center">
     <a href="https://docs.oracle.com/en/java/javase/17/"><img src="https://img.shields.io/badge/Java-Release%2017-green"/></a>
     <span>&nbsp;</span>
-    <a href="https://jitpack.io/#Teletha/conjure"><img src="https://img.shields.io/jitpack/v/github/Teletha/conjure?label=Repository&color=green"></a>
+    <a href="https://jitpack.io/#teletha/conjure"><img src="https://img.shields.io/jitpack/v/github/teletha/conjure?label=Repository&color=green"></a>
     <span>&nbsp;</span>
-    <a href="https://Teletha.github.io/conjure"><img src="https://img.shields.io/website.svg?down_color=red&down_message=CLOSE&label=Official%20Site&up_color=green&up_message=OPEN&url=https%3A%2F%2FTeletha.github.io%2Fconjure"></a>
+    <a href="https://teletha.github.io/conjure"><img src="https://img.shields.io/website.svg?down_color=red&down_message=CLOSE&label=Official%20Site&up_color=green&up_message=OPEN&url=https%3A%2F%2Fteletha.github.io%2Fconjure"></a>
 </p>
 
 
-## About The Project
+## Summary
+
+<p align="right"><a href="#top">back to top</a></p>
+
+
+## Usage
 
 <p align="right"><a href="#top">back to top</a></p>
 
@@ -23,7 +28,7 @@ OpenJDK 64-Bit Server VM (build 16+36-2231, mixed mode, sharing)
 ```
 <p align="right"><a href="#top">back to top</a></p>
 
-## Using in your build
+## Install
 For any code snippet below, please substitute the version given with the version of Conjure you wish to use.
 #### [Maven](https://maven.apache.org/)
 Add JitPack repository at the end of repositories element in your build.xml:
@@ -38,20 +43,18 @@ Add it into in the dependencies element like so:
 <dependency>
     <groupId>com.github.teletha</groupId>
     <artifactId>conjure</artifactId>
-    <version>1.0</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 #### [Gradle](https://gradle.org/)
 Add JitPack repository at the end of repositories in your build.gradle:
 ```gradle
-repositories {
-    maven { url "https://jitpack.io" }
+repositories } url "https://jitpack.io" }
 }
 ```
 Add it into the dependencies section like so:
 ```gradle
-dependencies {
-    implementation 'com.github.teletha:conjure:1.0'
+dependencies :conjure:1.0.0'
 }
 ```
 #### [SBT](https://www.scala-sbt.org/)
@@ -61,7 +64,7 @@ resolvers += "jitpack" at "https://jitpack.io"
 ```
 Add it into the libraryDependencies section like so:
 ```scala
-libraryDependencies += "com.github.teletha" % "conjure" % "1.0"
+libraryDependencies += "com.github.teletha" % "conjure" % "1.0.0"
 ```
 #### [Leiningen](https://leiningen.org/)
 Add JitPack repository at the end of repositories in your project.clj:
@@ -70,12 +73,12 @@ Add JitPack repository at the end of repositories in your project.clj:
 ```
 Add it into the dependencies section like so:
 ```clj
-:dependencies [[com.github.teletha/conjure "1.0"]]
+:dependencies [[com.github.teletha/conjure "1.0.0"]]
 ```
 #### [Bee](https://teletha.github.io/bee)
 Add it into your project definition class like so:
 ```java
-require("com.github.teletha", "conjure", "1.0");
+require("com.github.teletha", "conjure", "1.0.0");
 ```
 <p align="right"><a href="#top">back to top</a></p>
 
@@ -96,26 +99,26 @@ Contributing improvements in these areas is much easier, and much less of a hass
 
 ### Bug Reports
 If you come across a bug, please file a bug report. Warning us of a bug is possibly the most valuable contribution you can make to Conjure.
-If you encounter a bug that hasn't already been filed, [please file a report](https://github.com/Teletha/conjure/issues/new) with an [SSCCE](http://sscce.org/) demonstrating the bug.
-If you think something might be a bug, but you're not sure, ask on StackOverflow or on [conjure-discuss](https://github.com/Teletha/conjure/discussions).
+If you encounter a bug that hasn't already been filed, [please file a report](https://github.com/teletha/conjure/issues/new) with an [SSCCE](http://sscce.org/) demonstrating the bug.
+If you think something might be a bug, but you're not sure, ask on StackOverflow or on [conjure-discuss](https://github.com/teletha/conjure/discussions).
 <p align="right"><a href="#top">back to top</a></p>
 
 
-## Built with
+## Dependency
 Conjure depends on the following products on runtime.
-* [sinobu-2.12.0](https://mvnrepository.com/artifact/com.github.teletha/sinobu/2.12.0)
+* [sinobu-2.18.0](https://mvnrepository.com/artifact/com.github.teletha/sinobu/2.18.0)
 
 Conjure depends on the following products on test.
-* [antibug-1.2.7](https://mvnrepository.com/artifact/com.github.teletha/antibug/1.2.7)
+* [antibug-1.3.0](https://mvnrepository.com/artifact/com.github.teletha/antibug/1.3.0)
 * [apiguardian-api-1.1.2](https://mvnrepository.com/artifact/org.apiguardian/apiguardian-api/1.1.2)
-* [byte-buddy-1.12.7](https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy/1.12.7)
-* [byte-buddy-agent-1.12.7](https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy-agent/1.12.7)
-* [junit-jupiter-api-5.8.2](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api/5.8.2)
-* [junit-jupiter-engine-5.8.2](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine/5.8.2)
-* [junit-jupiter-params-5.8.2](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params/5.8.2)
-* [junit-platform-commons-1.8.2](https://mvnrepository.com/artifact/org.junit.platform/junit-platform-commons/1.8.2)
-* [junit-platform-engine-1.8.2](https://mvnrepository.com/artifact/org.junit.platform/junit-platform-engine/1.8.2)
-* [junit-platform-launcher-1.8.2](https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher/1.8.2)
+* [byte-buddy-1.12.13](https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy/1.12.13)
+* [byte-buddy-agent-1.12.13](https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy-agent/1.12.13)
+* [junit-jupiter-api-5.9.0-M1](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api/5.9.0-M1)
+* [junit-jupiter-engine-5.9.0-M1](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine/5.9.0-M1)
+* [junit-jupiter-params-5.9.0-M1](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params/5.9.0-M1)
+* [junit-platform-commons-1.9.0-M1](https://mvnrepository.com/artifact/org.junit.platform/junit-platform-commons/1.9.0-M1)
+* [junit-platform-engine-1.9.0-M1](https://mvnrepository.com/artifact/org.junit.platform/junit-platform-engine/1.9.0-M1)
+* [junit-platform-launcher-1.9.0](https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher/1.9.0)
 * [opentest4j-1.2.0](https://mvnrepository.com/artifact/org.opentest4j/opentest4j/1.2.0)
 <p align="right"><a href="#top">back to top</a></p>
 
