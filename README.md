@@ -18,6 +18,10 @@ The currently supported APIs are as follows:
 
 
 ## Usage
+Simply add this library to your classpath and it will work.
+```java
+// nothing to do
+```
 
 <p align="right"><a href="#top">back to top</a></p>
 
