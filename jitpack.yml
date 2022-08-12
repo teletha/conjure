@@ -1,9 +1,9 @@
 jdk:
-  - openjdk17
+  - openjdk11
 
 before_install: |
   source ~/.sdkman/bin/sdkman-init.sh
-  sdk install java 17-open
+  sdk install java 11-open
   source ~/.sdkman/bin/sdkman-init.sh
 
 install: |

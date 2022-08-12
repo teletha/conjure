@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://docs.oracle.com/en/java/javase/17/"><img src="https://img.shields.io/badge/Java-Release%2017-green"/></a>
+    <a href="https://docs.oracle.com/en/java/javase/11/"><img src="https://img.shields.io/badge/Java-Release%2011-green"/></a>
     <span>&nbsp;</span>
     <a href="https://jitpack.io/#teletha/conjure"><img src="https://img.shields.io/jitpack/v/github/teletha/conjure?label=Repository&color=green"></a>
     <span>&nbsp;</span>
@@ -27,7 +27,7 @@ Simply add this library to your classpath and it will work.
 
 
 ## Prerequisites
-Conjure runs on all major operating systems and requires only [Java version 17](https://docs.oracle.com/en/java/javase/17/) or later to run.
+Conjure runs on all major operating systems and requires only [Java version 11](https://docs.oracle.com/en/java/javase/11/) or later to run.
 To check, please run `java -version` from the command line interface. You should see something like this:
 ```
 > java -version
