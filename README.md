@@ -1,9 +1,9 @@
 <p align="center">
     <a href="https://docs.oracle.com/en/java/javase/11/"><img src="https://img.shields.io/badge/Java-Release%2011-green"/></a>
     <span>&nbsp;</span>
-    <a href="https://jitpack.io/#teletha/conjure"><img src="https://img.shields.io/jitpack/v/github/teletha/conjure?label=Repository&color=green"></a>
+    <a href="https://jitpack.io/#Teletha/conjure"><img src="https://img.shields.io/jitpack/v/github/Teletha/conjure?label=Repository&color=green"></a>
     <span>&nbsp;</span>
-    <a href="https://teletha.github.io/conjure"><img src="https://img.shields.io/website.svg?down_color=red&down_message=CLOSE&label=Official%20Site&up_color=green&up_message=OPEN&url=https%3A%2F%2Fteletha.github.io%2Fconjure"></a>
+    <a href="https://Teletha.github.io/conjure"><img src="https://img.shields.io/website.svg?down_color=red&down_message=CLOSE&label=Official%20Site&up_color=green&up_message=OPEN&url=https%3A%2F%2FTeletha.github.io%2Fconjure"></a>
 </p>
 
 
@@ -108,27 +108,14 @@ Contributing improvements in these areas is much easier, and much less of a hass
 
 ### Bug Reports
 If you come across a bug, please file a bug report. Warning us of a bug is possibly the most valuable contribution you can make to Conjure.
-If you encounter a bug that hasn't already been filed, [please file a report](https://github.com/teletha/conjure/issues/new) with an [SSCCE](http://sscce.org/) demonstrating the bug.
-If you think something might be a bug, but you're not sure, ask on StackOverflow or on [conjure-discuss](https://github.com/teletha/conjure/discussions).
+If you encounter a bug that hasn't already been filed, [please file a report](https://github.com/Teletha/conjure/issues/new) with an [SSCCE](http://sscce.org/) demonstrating the bug.
+If you think something might be a bug, but you're not sure, ask on StackOverflow or on [conjure-discuss](https://github.com/Teletha/conjure/discussions).
 <p align="right"><a href="#top">back to top</a></p>
 
 
 ## Dependency
 Conjure depends on the following products on runtime.
-* [sinobu-2.18.0](https://mvnrepository.com/artifact/com.github.teletha/sinobu/2.18.0)
-
-Conjure depends on the following products on test.
-* [antibug-1.3.0](https://mvnrepository.com/artifact/com.github.teletha/antibug/1.3.0)
-* [apiguardian-api-1.1.2](https://mvnrepository.com/artifact/org.apiguardian/apiguardian-api/1.1.2)
-* [byte-buddy-1.12.13](https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy/1.12.13)
-* [byte-buddy-agent-1.12.13](https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy-agent/1.12.13)
-* [junit-jupiter-api-5.9.0-M1](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api/5.9.0-M1)
-* [junit-jupiter-engine-5.9.0-M1](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine/5.9.0-M1)
-* [junit-jupiter-params-5.9.0-M1](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params/5.9.0-M1)
-* [junit-platform-commons-1.9.0-M1](https://mvnrepository.com/artifact/org.junit.platform/junit-platform-commons/1.9.0-M1)
-* [junit-platform-engine-1.9.0-M1](https://mvnrepository.com/artifact/org.junit.platform/junit-platform-engine/1.9.0-M1)
-* [junit-platform-launcher-1.9.0](https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher/1.9.0)
-* [opentest4j-1.2.0](https://mvnrepository.com/artifact/org.opentest4j/opentest4j/1.2.0)
+* [sinobu-2.20.0](https://mvnrepository.com/artifact/com.github.teletha/sinobu/2.20.0)
 <p align="right"><a href="#top">back to top</a></p>
 
 
