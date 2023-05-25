@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/teletha/conjure/compare/v1.0.0...v1.1.0) (2023-05-25)
+
+
+### Features
+
+* Support Java util logging. ([a1eda60](https://github.com/teletha/conjure/commit/a1eda603785f5d879f9b82618f81b8aa20115584))
+
 ## 1.0.0 (2022-01-18)
 
 
