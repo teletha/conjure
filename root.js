@@ -15,6 +15,13 @@ const root = {
 		{
 			"modifiers": {
 				"#": "java.util.Collections$UnmodifiableSet",},
+			"name": "JUL",
+			"packageName": "kiss",
+			"type": "Class"
+		},
+		{
+			"modifiers": {
+				"#": "java.util.Collections$UnmodifiableSet",},
 			"name": "Log4j2",
 			"packageName": "kiss",
 			"type": "Class"
