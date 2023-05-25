@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://docs.oracle.com/en/java/javase/11/"><img src="https://img.shields.io/badge/Java-Release%2011-green"/></a>
+    <a href="https://docs.oracle.com/en/java/javase/17/"><img src="https://img.shields.io/badge/Java-Release%2017-green"/></a>
     <span>&nbsp;</span>
     <a href="https://jitpack.io/#Teletha/conjure"><img src="https://img.shields.io/jitpack/v/github/Teletha/conjure?label=Repository&color=green"></a>
     <span>&nbsp;</span>
@@ -28,7 +28,7 @@ Simply add this library to your classpath and it will work.
 
 
 ## Prerequisites
-Conjure runs on all major operating systems and requires only [Java version 11](https://docs.oracle.com/en/java/javase/11/) or later to run.
+Conjure runs on all major operating systems and requires only [Java version 17](https://docs.oracle.com/en/java/javase/17/) or later to run.
 To check, please run `java -version` from the command line interface. You should see something like this:
 ```
 > java -version
@@ -59,12 +59,14 @@ Add it into in the dependencies element like so:
 #### [Gradle](https://gradle.org/)
 Add JitPack repository at the end of repositories in your build.gradle:
 ```gradle
-repositories } url "https://jitpack.io" }
+repositories {
+    maven { url "https://jitpack.io" }
 }
 ```
 Add it into the dependencies section like so:
 ```gradle
-dependencies :conjure:1.0.0'
+dependencies {
+    implementation 'com.github.teletha:conjure:1.0.0'
 }
 ```
 #### [SBT](https://www.scala-sbt.org/)
@@ -116,12 +118,12 @@ If you think something might be a bug, but you're not sure, ask on StackOverflow
 
 ## Dependency
 Conjure depends on the following products on runtime.
-* [sinobu-2.20.0](https://mvnrepository.com/artifact/com.github.teletha/sinobu/2.20.0)
+* [sinobu-3.3.0](https://mvnrepository.com/artifact/com.github.teletha/sinobu/3.3.0)
 <p align="right"><a href="#top">back to top</a></p>
 
 
 ## License
-Copyright (C) 2022 The CONJURE Development Team
+Copyright (C) 2023 The CONJURE Development Team
 
 MIT License
 

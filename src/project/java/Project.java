@@ -21,6 +21,7 @@ public class Project extends bee.api.Project {
                 * [Apache Commons Logging](https://commons.apache.org/proper/commons-logging/)
                 * [Apache Log4j2](https://logging.apache.org/log4j/2.x/)
                 * [SLF4J](https://www.slf4j.org/)
+                * [JUL](https://docs.oracle.com/en/java/javase/19/docs/api/java.logging/java/util/logging/package-summary.html)
                 """);
 
         require("com.github.teletha", "sinobu");
