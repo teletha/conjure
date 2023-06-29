@@ -24,7 +24,16 @@ import org.apache.logging.log4j.spi.Provider;
 public class Log4j2 extends Provider {
 
     public Log4j2() {
-        super(15, "3.0.0", Factory.class);
+        super(15, detectVersion(), Factory.class);
+    }
+
+    private static String detectVersion() {
+        try {
+            Class.forName("org.apache.logging.log4j.spi.LoggingSystem");
+            return "3.0.0";
+        } catch (ClassNotFoundException e) {
+            return "2.6.0";
+        }
     }
 
     /**
