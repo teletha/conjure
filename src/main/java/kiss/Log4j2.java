@@ -24,7 +24,7 @@ import org.apache.logging.log4j.spi.Provider;
 public class Log4j2 extends Provider {
 
     public Log4j2() {
-        super(15, "2.6.0", Factory.class);
+        super(15, "3.0.0", Factory.class);
     }
 
     /**
