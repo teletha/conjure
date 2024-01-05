@@ -22,6 +22,10 @@ import org.slf4j.spi.SLF4JServiceProvider;
 
 public class SLF4J implements SLF4JServiceProvider, ILoggerFactory {
 
+    static {
+        System.setProperty("slf4j.internal.verbosity", "error");
+    }
+
     /**
      * {@inheritDoc}
      */
