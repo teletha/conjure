@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.1](https://github.com/teletha/conjure/compare/v1.1.0...v1.1.1) (2024-01-05)
+
+
+### Bug Fixes
+
+* quieting SLF4j's internal logs ([6c9e5ae](https://github.com/teletha/conjure/commit/6c9e5aed28aa190d798e2268a3ab384cc92e331d))
+* Support multiple log4j versions. ([eba2c75](https://github.com/teletha/conjure/commit/eba2c752c6d87e095640115fef0e95f3d2655d69))
+* update license ([9f86319](https://github.com/teletha/conjure/commit/9f863197f80de8f7ff6a4493adeb7ccf16fbfc37))
+* Update log4j. ([a80d261](https://github.com/teletha/conjure/commit/a80d261dd1b4da1a6a44aa604edba3faea80a9e5))
+
 ## [1.1.0](https://github.com/teletha/conjure/compare/v1.0.0...v1.1.0) (2023-05-25)
 
 
