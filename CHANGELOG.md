@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/teletha/conjure/compare/v1.1.1...v1.1.2) (2024-01-08)
+
+
+### Bug Fixes
+
+* update ci process ([7387dcd](https://github.com/teletha/conjure/commit/7387dcd168e3f035c6a6c312f3ec36beb11724f7))
+
 ## [1.1.1](https://github.com/teletha/conjure/compare/v1.1.0...v1.1.1) (2024-01-05)
 
 
