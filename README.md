@@ -1,9 +1,9 @@
 <p align="center">
     <a href="https://docs.oracle.com/en/java/javase/17/"><img src="https://img.shields.io/badge/Java-Release%2017-green"/></a>
     <span>&nbsp;</span>
-    <a href="https://jitpack.io/#Teletha/conjure"><img src="https://img.shields.io/jitpack/v/github/Teletha/conjure?label=Repository&color=green"></a>
+    <a href="https://jitpack.io/#teletha/conjure"><img src="https://img.shields.io/jitpack/v/github/teletha/conjure?label=Repository&color=green"></a>
     <span>&nbsp;</span>
-    <a href="https://Teletha.github.io/conjure"><img src="https://img.shields.io/website.svg?down_color=red&down_message=CLOSE&label=Official%20Site&up_color=green&up_message=OPEN&url=https%3A%2F%2FTeletha.github.io%2Fconjure"></a>
+    <a href="https://teletha.github.io/conjure"><img src="https://img.shields.io/website.svg?down_color=red&down_message=CLOSE&label=Official%20Site&up_color=green&up_message=OPEN&url=https%3A%2F%2Fteletha.github.io%2Fconjure"></a>
 </p>
 
 
@@ -53,7 +53,7 @@ Add it into in the dependencies element like so:
 <dependency>
     <groupId>com.github.teletha</groupId>
     <artifactId>conjure</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.1</version>
 </dependency>
 ```
 #### [Gradle](https://gradle.org/)
@@ -66,7 +66,7 @@ repositories {
 Add it into the dependencies section like so:
 ```gradle
 dependencies {
-    implementation 'com.github.teletha:conjure:1.0.0'
+    implementation 'com.github.teletha:conjure:1.1.1'
 }
 ```
 #### [SBT](https://www.scala-sbt.org/)
@@ -76,7 +76,7 @@ resolvers += "jitpack" at "https://jitpack.io"
 ```
 Add it into the libraryDependencies section like so:
 ```scala
-libraryDependencies += "com.github.teletha" % "conjure" % "1.0.0"
+libraryDependencies += "com.github.teletha" % "conjure" % "1.1.1"
 ```
 #### [Leiningen](https://leiningen.org/)
 Add JitPack repository at the end of repositories in your project.clj:
@@ -85,12 +85,12 @@ Add JitPack repository at the end of repositories in your project.clj:
 ```
 Add it into the dependencies section like so:
 ```clj
-:dependencies [[com.github.teletha/conjure "1.0.0"]]
+:dependencies [[com.github.teletha/conjure "1.1.1"]]
 ```
 #### [Bee](https://teletha.github.io/bee)
 Add it into your project definition class like so:
 ```java
-require("com.github.teletha", "conjure", "1.0.0");
+require("com.github.teletha", "conjure", "1.1.1");
 ```
 <p align="right"><a href="#top">back to top</a></p>
 
@@ -111,19 +111,19 @@ Contributing improvements in these areas is much easier, and much less of a hass
 
 ### Bug Reports
 If you come across a bug, please file a bug report. Warning us of a bug is possibly the most valuable contribution you can make to Conjure.
-If you encounter a bug that hasn't already been filed, [please file a report](https://github.com/Teletha/conjure/issues/new) with an [SSCCE](http://sscce.org/) demonstrating the bug.
-If you think something might be a bug, but you're not sure, ask on StackOverflow or on [conjure-discuss](https://github.com/Teletha/conjure/discussions).
+If you encounter a bug that hasn't already been filed, [please file a report](https://github.com/teletha/conjure/issues/new) with an [SSCCE](http://sscce.org/) demonstrating the bug.
+If you think something might be a bug, but you're not sure, ask on StackOverflow or on [conjure-discuss](https://github.com/teletha/conjure/discussions).
 <p align="right"><a href="#top">back to top</a></p>
 
 
 ## Dependency
 Conjure depends on the following products on runtime.
-* [sinobu-3.3.0](https://mvnrepository.com/artifact/com.github.teletha/sinobu/3.3.0)
+* [sinobu-3.9.1](https://mvnrepository.com/artifact/com.github.teletha/sinobu/3.9.1)
 <p align="right"><a href="#top">back to top</a></p>
 
 
 ## License
-Copyright (C) 2023 The CONJURE Development Team
+Copyright (C) 2024 The CONJURE Development Team
 
 MIT License
 
