@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/teletha/conjure/compare/v1.1.1...v1.2.0) (2024-10-07)
+
+
+### Features
+
+* update to java21 ([68923c3](https://github.com/teletha/conjure/commit/68923c3ba96e7ee32811d3d28d18c36089fbcc38))
+
+
+### Bug Fixes
+
+* update ci process ([7387dcd](https://github.com/teletha/conjure/commit/7387dcd168e3f035c6a6c312f3ec36beb11724f7))
+
 ## [1.1.1](https://github.com/teletha/conjure/compare/v1.1.0...v1.1.1) (2024-01-05)
 
 
