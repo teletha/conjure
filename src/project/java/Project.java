@@ -1,3 +1,4 @@
+
 /*
  * Copyright (C) 2024 The CONJURE Development Team
  *
@@ -22,7 +23,7 @@ public class Project extends bee.api.Project {
 
     {
         product("com.github.teletha", "conjure", ref("version.txt"));
-        require(SourceVersion.RELEASE_19, SourceVersion.RELEASE_17);
+        require(SourceVersion.RELEASE_21);
         describe("""
                 Including this library in the classpath automatically delegates logs output from the various logging APIs to [Sinobu](https://github.com/teletha/sinobu)'s logging API.
 

@@ -1,11 +1,10 @@
 <p align="center">
-    <a href="https://docs.oracle.com/en/java/javase/17/"><img src="https://img.shields.io/badge/Java-Release%2017-green"/></a>
+    <a href="https://docs.oracle.com/en/java/javase/21/"><img src="https://img.shields.io/badge/Java-Release%2021-green"/></a>
     <span>&nbsp;</span>
-    <a href="https://jitpack.io/#teletha/conjure"><img src="https://img.shields.io/jitpack/v/github/teletha/conjure?label=Repository&color=green"></a>
+    <a href="https://jitpack.io/#Teletha/conjure"><img src="https://img.shields.io/jitpack/v/github/Teletha/conjure?label=Repository&color=green"></a>
     <span>&nbsp;</span>
-    <a href="https://teletha.github.io/conjure"><img src="https://img.shields.io/website.svg?down_color=red&down_message=CLOSE&label=Official%20Site&up_color=green&up_message=OPEN&url=https%3A%2F%2Fteletha.github.io%2Fconjure"></a>
+    <a href="https://Teletha.github.io/conjure"><img src="https://img.shields.io/website.svg?down_color=red&down_message=CLOSE&label=Official%20Site&up_color=green&up_message=OPEN&url=https%3A%2F%2FTeletha.github.io%2Fconjure"></a>
 </p>
-
 
 ## Summary
 Including this library in the classpath automatically delegates logs output from the various logging APIs to [Sinobu](https://github.com/teletha/sinobu)'s logging API.
@@ -27,15 +26,11 @@ Simply add this library to your classpath and it will work.
 <p align="right"><a href="#top">back to top</a></p>
 
 
+
+
 ## Prerequisites
-Conjure runs on all major operating systems and requires only [Java version 17](https://docs.oracle.com/en/java/javase/17/) or later to run.
-To check, please run `java -version` from the command line interface. You should see something like this:
-```
-> java -version
-openjdk version "16" 2021-03-16
-OpenJDK Runtime Environment (build 16+36-2231)
-OpenJDK 64-Bit Server VM (build 16+36-2231, mixed mode, sharing)
-```
+Conjure runs on all major operating systems and requires only [Java version 21](https://docs.oracle.com/en/java/javase/21/) or later to run.
+To check, please run `java -version` on your terminal.
 <p align="right"><a href="#top">back to top</a></p>
 
 ## Install
@@ -111,14 +106,14 @@ Contributing improvements in these areas is much easier, and much less of a hass
 
 ### Bug Reports
 If you come across a bug, please file a bug report. Warning us of a bug is possibly the most valuable contribution you can make to Conjure.
-If you encounter a bug that hasn't already been filed, [please file a report](https://github.com/teletha/conjure/issues/new) with an [SSCCE](http://sscce.org/) demonstrating the bug.
-If you think something might be a bug, but you're not sure, ask on StackOverflow or on [conjure-discuss](https://github.com/teletha/conjure/discussions).
+If you encounter a bug that hasn't already been filed, [please file a report](https://github.com/Teletha/conjure/issues/new) with an [SSCCE](http://sscce.org/) demonstrating the bug.
+If you think something might be a bug, but you're not sure, ask on StackOverflow or on [conjure-discuss](https://github.com/Teletha/conjure/discussions).
 <p align="right"><a href="#top">back to top</a></p>
 
 
 ## Dependency
 Conjure depends on the following products on runtime.
-* [sinobu-3.9.1](https://mvnrepository.com/artifact/com.github.teletha/sinobu/3.9.1)
+* [sinobu-3.14.1](https://mvnrepository.com/artifact/com.github.teletha/sinobu/3.14.1)
 <p align="right"><a href="#top">back to top</a></p>
 
 
