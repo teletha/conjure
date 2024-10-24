@@ -10,7 +10,6 @@
 package kiss;
 
 import java.lang.System.Logger.Level;
-import java.nio.CharBuffer;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -38,7 +37,7 @@ public class LoggerTestBase {
     /**
      * 
      */
-    protected static class LogBuffer implements WiseTriConsumer<String, Level, CharBuffer> {
+    protected static class LogBuffer implements WiseTriConsumer<String, Level, Object> {
 
         private Deque<Level> levels = new ArrayDeque();
 
@@ -48,7 +47,7 @@ public class LoggerTestBase {
          * {@inheritDoc}
          */
         @Override
-        public void ACCEPT(String param1, Level param2, CharBuffer param3) throws Throwable {
+        public void ACCEPT(String param1, Level param2, Object param3) throws Throwable {
             String message = param3.toString();
             messages.add(message.substring(message.lastIndexOf('\t') + 1).trim());
             levels.add(param2);
