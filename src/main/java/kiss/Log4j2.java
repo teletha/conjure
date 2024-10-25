@@ -116,10 +116,6 @@ public class Log4j2 extends Provider {
         }
     }
 
-    /**
-     * 
-     */
-    @SuppressWarnings("serial")
     private static class Logger extends AbstractLogger {
 
         private Logger(String name) {
