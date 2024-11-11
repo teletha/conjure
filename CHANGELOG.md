@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.0](https://github.com/teletha/conjure/compare/v1.1.1...v1.2.0) (2024-11-11)
+
+
+### Features
+
+* update to java21 ([68923c3](https://github.com/teletha/conjure/commit/68923c3ba96e7ee32811d3d28d18c36089fbcc38))
+
+
+### Bug Fixes
+
+* require java 21 ([b94b20a](https://github.com/teletha/conjure/commit/b94b20a79a58ee9a2798954c13d73e8bb332a60b))
+* update ci process ([7387dcd](https://github.com/teletha/conjure/commit/7387dcd168e3f035c6a6c312f3ec36beb11724f7))
+* update sinobu ([2657eb3](https://github.com/teletha/conjure/commit/2657eb3ae40fd827d2bd6ad55e07b45f4ff56b5f))
+
 ## [1.1.1](https://github.com/teletha/conjure/compare/v1.1.0...v1.1.1) (2024-01-05)
 
 
