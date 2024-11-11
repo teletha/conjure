@@ -18,6 +18,9 @@
  *
  *          https://opensource.org/licenses/MIT
  */
+
+import javax.lang.model.SourceVersion;
+
 public class Project extends bee.api.Project {
 
     {
@@ -31,6 +34,8 @@ public class Project extends bee.api.Project {
                 * [SLF4J](https://www.slf4j.org/)
                 * [JUL](https://docs.oracle.com/en/java/javase/19/docs/api/java.logging/java/util/logging/package-summary.html)
                 """);
+
+        require(SourceVersion.latest(), SourceVersion.RELEASE_21);
 
         require("com.github.teletha", "sinobu");
         require("org.slf4j", "slf4j-api").atProvided();

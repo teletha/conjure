@@ -1,9 +1,9 @@
 <p align="center">
-    <a href="https://docs.oracle.com/en/java/javase/23/"><img src="https://img.shields.io/badge/Java-Release%2023-green"/></a>
+    <a href="https://docs.oracle.com/en/java/javase/21/"><img src="https://img.shields.io/badge/Java-Release%2021-green"/></a>
     <span>&nbsp;</span>
-    <a href="https://jitpack.io/#teletha/conjure"><img src="https://img.shields.io/jitpack/v/github/teletha/conjure?label=Repository&color=green"></a>
+    <a href="https://jitpack.io/#Teletha/conjure"><img src="https://img.shields.io/jitpack/v/github/Teletha/conjure?label=Repository&color=green"></a>
     <span>&nbsp;</span>
-    <a href="https://teletha.github.io/conjure"><img src="https://img.shields.io/website.svg?down_color=red&down_message=CLOSE&label=Official%20Site&up_color=green&up_message=OPEN&url=https%3A%2F%2Fteletha.github.io%2Fconjure"></a>
+    <a href="https://Teletha.github.io/conjure"><img src="https://img.shields.io/website.svg?down_color=red&down_message=CLOSE&label=Official%20Site&up_color=green&up_message=OPEN&url=https%3A%2F%2FTeletha.github.io%2Fconjure"></a>
 </p>
 
 ## Summary
@@ -29,7 +29,7 @@ Simply add this library to your classpath and it will work.
 
 
 ## Prerequisites
-Conjure runs on all major operating systems and requires only [Java version 23](https://docs.oracle.com/en/java/javase/23/) or later to run.
+Conjure runs on all major operating systems and requires only [Java version 21](https://docs.oracle.com/en/java/javase/21/) or later to run.
 To check, please run `java -version` on your terminal.
 <p align="right"><a href="#top">back to top</a></p>
 
@@ -106,14 +106,14 @@ Contributing improvements in these areas is much easier, and much less of a hass
 
 ### Bug Reports
 If you come across a bug, please file a bug report. Warning us of a bug is possibly the most valuable contribution you can make to Conjure.
-If you encounter a bug that hasn't already been filed, [please file a report](https://github.com/teletha/conjure/issues/new) with an [SSCCE](http://sscce.org/) demonstrating the bug.
-If you think something might be a bug, but you're not sure, ask on StackOverflow or on [conjure-discuss](https://github.com/teletha/conjure/discussions).
+If you encounter a bug that hasn't already been filed, [please file a report](https://github.com/Teletha/conjure/issues/new) with an [SSCCE](http://sscce.org/) demonstrating the bug.
+If you think something might be a bug, but you're not sure, ask on StackOverflow or on [conjure-discuss](https://github.com/Teletha/conjure/discussions).
 <p align="right"><a href="#top">back to top</a></p>
 
 
 ## Dependency
 Conjure depends on the following products on runtime.
-* [sinobu-4.2.0](https://mvnrepository.com/artifact/com.github.teletha/sinobu/4.2.0)
+* [sinobu-4.4.0](https://mvnrepository.com/artifact/com.github.teletha/sinobu/4.4.0)
 <p align="right"><a href="#top">back to top</a></p>
 
 
