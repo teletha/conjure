@@ -80,7 +80,6 @@ The currently supported APIs are as follows:
 					<compilerId>javac</compilerId>
 					<compilerArgs>
 						<arg>-parameters</arg>
-						<arg>-warn:none</arg>
 					</compilerArgs>
 				</configuration>
 			</plugin>
