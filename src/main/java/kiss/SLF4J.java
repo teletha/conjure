@@ -16,6 +16,7 @@ import org.slf4j.Marker;
 import org.slf4j.event.Level;
 import org.slf4j.helpers.BasicMarkerFactory;
 import org.slf4j.helpers.LegacyAbstractLogger;
+import org.slf4j.helpers.MessageFormatter;
 import org.slf4j.helpers.NOPMDCAdapter;
 import org.slf4j.spi.MDCAdapter;
 import org.slf4j.spi.SLF4JServiceProvider;
@@ -123,7 +124,7 @@ public class SLF4J implements SLF4JServiceProvider, ILoggerFactory {
                     break;
                 }
 
-                I.log("system", String.format(msg, arguments), kind, 5);
+                I.log("system", MessageFormatter.arrayFormat(msg, arguments).getMessage(), kind, 5);
                 if (throwable != null) I.log("system", throwable, kind, 5);
             }
 
