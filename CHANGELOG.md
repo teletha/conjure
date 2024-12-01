@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/teletha/conjure/compare/v1.2.0...v1.2.1) (2024-12-01)
+
+
+### Bug Fixes
+
+* use slf4j formatter ([6bcb236](https://github.com/teletha/conjure/commit/6bcb2363d9372d59c7750ba8bcacf2da10f05bdd))
+
 ## [1.2.0](https://github.com/teletha/conjure/compare/v1.1.1...v1.2.0) (2024-11-11)
 
 
