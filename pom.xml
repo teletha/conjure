@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.teletha</groupId>
 	<artifactId>conjure</artifactId>
-	<version>1.2.0</version>
+	<version>1.2.1</version>
 	<packaging>jar</packaging>
 	<name>conjure</name>
 	<description>Including this library in the classpath automatically delegates logs output from the various logging APIs to [Sinobu](https://github.com/teletha/sinobu)&#39;s logging API.
