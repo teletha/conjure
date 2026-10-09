@@ -24,7 +24,7 @@ import javax.lang.model.SourceVersion;
 public class Project extends bee.api.Project {
 
     {
-        product("com.github.teletha", "conjure", ref("version.txt"));
+        product("io.github.teletha", "conjure", ref("version.txt"));
         describe("""
                 Including this library in the classpath automatically delegates logs output from the various logging APIs to [Sinobu](https://github.com/teletha/sinobu)'s logging API.
 
@@ -37,10 +37,10 @@ public class Project extends bee.api.Project {
 
         require(SourceVersion.latest(), SourceVersion.RELEASE_21);
 
-        require("com.github.teletha", "sinobu");
+        require("io.github.teletha", "sinobu");
         require("org.slf4j", "slf4j-api").atProvided();
         require("org.apache.logging.log4j", "log4j-api").atProvided();
         require("commons-logging", "commons-logging").atProvided();
-        require("com.github.teletha", "antibug").atTest();
+        require("io.github.teletha", "antibug").atTest();
     }
 }
