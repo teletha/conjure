@@ -1,11 +1,11 @@
 <project>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.teletha</groupId>
+	<groupId>io.github.teletha</groupId>
 	<artifactId>conjure</artifactId>
 	<version>1.2.1</version>
 	<packaging>jar</packaging>
 	<name>conjure</name>
-	<description>Including this library in the classpath automatically delegates logs output from the various logging APIs to [Sinobu](https://github.com/teletha/sinobu)&#39;s logging API.
+	<description>Including this library in the classpath automatically delegates logs output from the various logging APIs to [Sinobu](https://github.com/teletha/sinobu)&apos;s logging API.
 
 The currently supported APIs are as follows:
 * [Apache Commons Logging](https://commons.apache.org/proper/commons-logging/)
@@ -20,16 +20,16 @@ The currently supported APIs are as follows:
 	</licenses>
 	<dependencies>
 		<dependency>
-			<groupId>com.github.teletha</groupId>
+			<groupId>io.github.teletha</groupId>
 			<artifactId>antibug</artifactId>
-			<version>1.13.0</version>
+			<version>1.16.1</version>
 			<scope>test</scope>
 			<exclusions/>
 		</dependency>
 		<dependency>
 			<groupId>commons-logging</groupId>
 			<artifactId>commons-logging</artifactId>
-			<version>1.3.5</version>
+			<version>1.4.0</version>
 			<scope>provided</scope>
 			<exclusions/>
 		</dependency>
@@ -41,9 +41,9 @@ The currently supported APIs are as follows:
 			<exclusions/>
 		</dependency>
 		<dependency>
-			<groupId>com.github.teletha</groupId>
+			<groupId>io.github.teletha</groupId>
 			<artifactId>sinobu</artifactId>
-			<version>4.6.1</version>
+			<version>4.14.0</version>
 			<scope>compile</scope>
 			<exclusions/>
 		</dependency>
@@ -74,7 +74,7 @@ The currently supported APIs are as follows:
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.14.0</version>
 				<configuration>
-					<release>24</release>
+					<release>25</release>
 					<encoding>UTF-8</encoding>
 					<compilerId>javac</compilerId>
 					<compilerArgs>
@@ -87,7 +87,7 @@ The currently supported APIs are as follows:
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.5.2</version>
 				<configuration>
-					<argLine>-ea   -Dfile.encoding=UTF-8</argLine>
+					<argLine>-ea --enable-native-access=ALL-UNNAMED -Dfile.encoding=UTF-8</argLine>
 					<reportFormat>plain</reportFormat>
 					<consoleOutputReporter>
 						<disable>true</disable>
