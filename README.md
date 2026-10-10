@@ -48,7 +48,7 @@ Add it into in the dependencies element like so:
 <dependency>
     <groupId>io.github.teletha</groupId>
     <artifactId>conjure</artifactId>
-    <version>1.2.1</version>
+    <version>1.2.2</version>
 </dependency>
 ```
 #### [Gradle](https://gradle.org/)
@@ -61,7 +61,7 @@ repositories {
 Add it into the dependencies section like so:
 ```gradle
 dependencies {
-    implementation 'io.github.teletha:conjure:1.2.1'
+    implementation 'io.github.teletha:conjure:1.2.2'
 }
 ```
 #### [SBT](https://www.scala-sbt.org/)
@@ -71,7 +71,7 @@ resolvers += "jitpack" at "https://jitpack.io"
 ```
 Add it into the libraryDependencies section like so:
 ```scala
-libraryDependencies += "io.github.teletha" % "conjure" % "1.2.1"
+libraryDependencies += "io.github.teletha" % "conjure" % "1.2.2"
 ```
 #### [Leiningen](https://leiningen.org/)
 Add JitPack repository at the end of repositories in your project().clj:
@@ -80,12 +80,12 @@ Add JitPack repository at the end of repositories in your project().clj:
 ```
 Add it into the dependencies section like so:
 ```clj
-:dependencies [[io.github.teletha/conjure "1.2.1"]]
+:dependencies [[io.github.teletha/conjure "1.2.2"]]
 ```
 #### [Bee](https://teletha.github.io/bee)
 Add it into your project definition class like so:
 ```java
-require("io.github.teletha", "conjure", "1.2.1");
+require("io.github.teletha", "conjure", "1.2.2");
 ```
 <p align="right"><a href="#top">back to top</a></p>
 
